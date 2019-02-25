@@ -1,0 +1,82 @@
+
+
+import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.*;
+import java.util.concurrent.CopyOnWriteArrayList;
+
+import org.jasypt.encryption.pbe.StandardPBEStringEncryptor;
+public class Jasypt 
+{
+	
+	public static void main(String[] args) {
+	
+		 
+		
+		  
+		       Scanner s=new Scanner(System.in);
+		       System.out.print("Please enter input");
+		       int n=s.nextInt();
+		      ArrayList<String> list=new ArrayList<String>();
+		      ArrayList<String> list1=new ArrayList<String>();
+		      ArrayList<String> reverselist=new ArrayList<String>();
+		     list.add("i.like.this.program.very.much");
+		     list1.add("pqr.mno");
+		     ArrayList<String> listnew=new ArrayList<String>();
+		     ArrayList<String> listnew1=new ArrayList<String>();
+		     StringBuffer snew = new StringBuffer();
+		     StringBuffer snew1= new StringBuffer();
+		     for(String str:list)
+		     {
+		    	
+		    	 
+		    	 StringTokenizer sb=new StringTokenizer(str,".");
+		    	 while(sb.hasMoreTokens())
+		    	 {
+		    		 
+		    		 String s1=sb.nextToken();
+		    		 listnew.add(s1);
+		    		 
+		    	 }
+		    	 
+		     }
+		     
+		     for(String str:list1)
+		     {
+		    	
+		    	 
+		    	 StringTokenizer sb=new StringTokenizer(str,".");
+		    	 while(sb.hasMoreTokens())
+		    	 {
+		    		 
+		    		 String s1=sb.nextToken();
+		    		 listnew1.add(s1);
+		    		 
+		    	 }
+		    	 
+		     }
+		     for(int i=listnew.size()-1;i>=0;i--)
+		     {
+		    	 
+		    	snew.append(listnew.get(i)).append(".");
+		     }
+		     for(int i=listnew1.size()-1;i>=0;i--)
+		     {
+		    	 
+		    	 snew1.append(listnew1.get(i)).append(".");
+		     }
+		     
+		     
+		     System.out.println(listnew);
+		     System.out.println(listnew1);
+		     System.out.println(snew);
+		     System.out.println(snew1);
+		       
+		    
+		
+	}
+	
+	    
+}
